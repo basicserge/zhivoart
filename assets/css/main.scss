@@ -1,0 +1,232 @@
+$header_height: 12rem; 
+$header_height_mob: 7rem; 
+
+@import 'colours';
+@import 'fonts';
+@import 'header';
+@import 'footer';
+@import 'section-intro';
+@import 'section-services';
+@import 'owl.carousel.min';
+@import 'photoswipe';
+@import 'default-skin/default-skin';
+
+
+body {
+	background-color: $black !important;
+	color: $grey;
+	font-family: MuseoSansRegular, sans-serif;
+}
+
+p {color: rgba(255, 255, 255, 0.7);}
+
+h1 {
+    font-family: 'MuseoSansBold', sans-serif;
+    font-size: 3.1rem;
+    color: #fff;
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
+}
+
+h3 {
+    font-family: 'MuseoSansBold', sans-serif;
+    font-size: 3.1rem;
+    color: #fff;
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
+	@media only screen and (max-width: 500px){
+    font-size: 1.8rem;
+    line-height: 1.25;
+    }
+}
+
+h5 {
+	color: $accent;
+	font-family: 'MuseoSansBlack', sans-serif;
+	font-size: 2.3rem;
+	line-height: 1.565;
+	margin-bottom: 0;
+	// text-transform: uppercase;
+	letter-spacing: .3rem;
+	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+h6 {
+	color: $accent;
+    font-size: 1.46rem;
+    line-height: 1.875;
+    margin-bottom: .3rem;
+    letter-spacing: .4rem;
+	text-transform: uppercase;
+}
+
+.section-intro {
+	text-align: center;
+}
+.top-container {padding-top: $header_height;}
+/* Portfolio */
+.section-portfolio {
+	position: relative;
+	padding: 0;
+}
+.section-portfolio::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	opacity: 0.2;
+	// right: 0;
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: none;
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+	width: 100%;
+	height: 100%;
+	// background: url("/assets/img/zhivo_90.svg") no-repeat -10% center;
+	background: url("/assets/img/zhivoart_logo.svg") no-repeat center;
+	// background: url(/assets/img/299bg.svg) repeat 100%;
+	// background: url("/assets/img/270.svg") no-repeat center; opacity: 0.8; 
+	// background: url("/assets/img/zhivoart_logo.svg") no-repeat center, url(https://images.pexels.com/photos/298723/pexels-photo-298723.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb) no-repeat center;
+	background-size: 105%;
+}
+
+// .section-portfolio::after {
+// 	content: '';
+// 	position: fixed;
+// 	top: 0;
+// 	opacity: 0.2;
+// 	// right: 0;
+// 	display: block;
+// 	margin: 0;
+// 	padding: 0;
+// 	border: none;
+// 	font: 0/0 a;
+// 	text-shadow: none;
+// 	color: transparent;
+// 	width: 100%;
+// 	height: 100%;
+// 	background: url("/assets/img/art_90.svg") no-repeat 120% center;
+// 	background-size: contain;
+// 	z-index: -1;
+// }
+
+.works-page::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	opacity: 0.2;
+	// right: 0;
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: none;
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+	width: 100%;
+	height: 100%;
+	background-color: $black;
+	// background: url("/assets/img/zhivoart_logo.svg") no-repeat center, url(/assets/img/299bg.svg) no-repeat 100%;
+	background: url(/assets/img/299bg.svg) no-repeat 100%;
+	background-size: cover;
+
+}
+.works-page footer {background: transparent !important;}
+
+/* Cards Override */
+.card-columns {
+	@media only screen and (max-width: 900px){
+    	column-count: 2;
+  	}
+	@media only screen and (max-width: 760px){
+    	column-count: 1;
+  	}
+}
+
+.card-columns .card {
+    margin-bottom: 1.15rem;
+    border: none;
+    background: transparent;
+    .card-img-top {border-radius: 0 !important;}
+    a::after {
+    	content: '';
+    	position: absolute;
+    	width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		transition: opacity .64s ease;
+		border: 10px solid $accent;
+		cursor: pointer;
+    }
+    a:hover::after {opacity: 1;}
+}
+
+.dropcap {
+	font-size: 4em;
+    display: inline-block;
+    float: left;
+    margin-top: -0.1em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    line-height: 0.8em;
+    font-family: 'MuseoSansBlack';
+    padding-right: .41rem;
+    font-style: normal;
+    color: #fff;
+}
+
+/* my-gallery */
+.my-gallery {
+	figure {
+		margin: 0;
+		padding: 2px;
+		&:first-child {width: 100%; height: auto;}
+	}
+	img {
+		max-width: 100%;
+	}
+}
+
+/* Project Description */
+.proj-descr {
+	padding-left: 3rem;
+	br {line-height: 2em;}
+	b {
+	    // font-family: 'MuseoSansLight', sans-serif;
+    	// font-size: 3.1rem;
+    	font-weight: normal;
+    	color: #fff;
+	}
+	h1 {
+	    font-family: 'slabsthin', sans-serif;
+	    font-size: 2.7rem;
+	    color: #fff;
+	    line-height: 1.15;
+	    margin-bottom: 2rem;
+	@media only screen and (max-width: 500px){font-size: 1.8rem;}
+
+	}
+	.inf {
+		border-top: 1px solid;
+		display: inline-block;
+		padding-top: 0.5rem;
+	    margin-bottom: 4rem;
+	    text-transform: uppercase;
+	    font-size: 0.8rem;
+	    color: #fff;
+	}
+	.lead {
+	    color: $accent;
+		font-size: 1.2px;
+	}
+	img {
+	    width: 4.5rem;
+	    float: left;
+	    margin: -6px 9px 0px 0;
+	    border: 3px solid #FFF;
+	}
+}

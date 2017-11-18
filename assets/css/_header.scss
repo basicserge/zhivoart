@@ -1,0 +1,41 @@
+header {
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+56,000000+100&0.84+0,0.72+56,0+100 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.50) 56%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.80) 0%,rgba(0,0,0,0.50) 56%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0.80) 0%,rgba(0,0,0,0.50) 56%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	transition: background-color, 1s ease;
+	&:hover {
+		// background-color: rgba(0,0,0,0.68);
+	}
+}
+
+.za-logo {
+	width: 11rem;
+	@media only screen and (max-width: 500px){
+		width: 8rem;
+	}
+}
+.header-nav {z-index: 3; height: $header_height;}
+@media only screen and (max-width: 500px){
+	.header-nav {height: $header_height_mob;}
+}
+// .navbar-brand {position: fixed;}
+.header-nav .nav-item {
+	text-transform: lowercase;
+	font-family: MuseoSansBlack, sans-serif;
+	font-size: 1.1rem;
+	color: #fff;
+    text-shadow: 1px 1px 1px #000;
+}
+
+@media only screen and (min-width: 800px){
+	.header-nav .nav-item + .nav-item::before {
+		content: '·';
+		margin-right: 0.7em; 
+		cursor: default;
+	}
+}

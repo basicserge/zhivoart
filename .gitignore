@@ -1,0 +1,7 @@
+/node_modules
+/.idea
+.env
+composer.lock
+yarn.lock
+package-lock.json
+/_generated

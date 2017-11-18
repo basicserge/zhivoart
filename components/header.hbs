@@ -1,0 +1,15 @@
+<header>
+  <nav class="header-nav navbar navbar-expand-lg container">
+    <a class="navbar-brand" href="/" ><img src="/assets/img/zhivoart_logo.svg" class="za-logo" alt="{{global.company_name}}"></a>
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end " id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        {{#each global.header_nav}}
+          <a class="nav-item nav-link {{#isActive this.slug ../page_slug}}{{/isActive}}" href="/{{this.slug}}/index.html">{{this.title}}</span></a>
+        {{/each}}
+      </div>
+    </div>
+  </nav>
+</header>

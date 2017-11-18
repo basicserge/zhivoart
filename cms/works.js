@@ -1,0 +1,3 @@
+{
+	bodyClass: 'sdfs'
+}
